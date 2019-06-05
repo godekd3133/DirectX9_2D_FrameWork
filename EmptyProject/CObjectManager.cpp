@@ -17,18 +17,7 @@ CObjectManager::~CObjectManager()
 	m_Objects.clear();
 }
 
-void CObjectManager::AddObject(CObject *  _pObject)
-{
-	
-	if (nullptr == _pObject)
-	{
-		DEBUG_LOG("AddObject Func : Object was nullptr");
-		return;
-	}
-	_pObject->CObject::Init(); 
-	_pObject->Init();
-	m_Objects.push_back(_pObject);
-}
+
 
 void CObjectManager::Update()
 {

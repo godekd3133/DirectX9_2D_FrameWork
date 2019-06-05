@@ -151,7 +151,7 @@
       <PrecompiledHeaderFile>DXUT.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableModules>true</EnableModules>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
@@ -391,7 +391,6 @@
   <ItemGroup>
     <ClCompile Include="CAnimation.cpp" />
     <ClCompile Include="CCameraManager.cpp" />
-    <ClCompile Include="CCollider.cpp" />
     <ClCompile Include="CComponent.cpp" />
     <ClCompile Include="CDataManager.cpp" />
     <ClCompile Include="CImageManager.cpp" />
@@ -412,7 +411,6 @@
     <ClCompile Include="stdafx.cpp" />
     <ClInclude Include="CAnimation.h" />
     <ClInclude Include="CCameraManager.h" />
-    <ClInclude Include="CCollider.h" />
     <ClInclude Include="CComponent.h" />
     <ClInclude Include="CDataManager.h" />
     <ClInclude Include="CImageManager.h" />
@@ -434,7 +432,6 @@
     <ClInclude Include="CTransform.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="stdafx.h" />
-    <None Include="cpp.hint" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />

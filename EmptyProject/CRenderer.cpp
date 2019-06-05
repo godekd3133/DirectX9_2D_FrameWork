@@ -27,12 +27,17 @@ void CRenderer::Update()
 
 void CRenderer::Render()
 {
+	if (NULL == m_pTexture)
+	{
+		DEBUG_LOG("Object Name");
+	}
+
 	m_pTexture->Render(
-		m_pObject->tf->m_vPosition,
-		m_pObject->tf->m_vScale,
-		m_pObject->tf->m_fRotation,
+		this->m_pObject->Translation->m_vPosition,
+		this->m_pObject->Translation->m_vScale,
+		this->m_pObject->Translation->m_fRotation,
 		this->m_bCenterRender,
-		m_pObject->tf->m_vRotationCenter,
+		this->m_pObject->Translation->m_vRotationCenter,
 		this->m_rRect,
 		this->m_Color);
 }
@@ -50,6 +55,6 @@ void CRenderer::SetTexture(CTexture * _pTexture)
 	}
 	this->m_pTexture = _pTexture;
 
-	m_rRect = { 0.f,0.f,_pTexture->m_Info.Width, _pTexture->m_Info.Height };
+	m_rRect = Rect(0.f,0.f,_pTexture->m_Info.Width, _pTexture->m_Info.Height);
 
 }

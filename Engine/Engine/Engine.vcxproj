@@ -148,12 +148,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="KOI_Rect.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="KOI_Math.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="KOI_Rect.h" />
     <ClInclude Include="KOI_Define.h" />
     <ClInclude Include="KOI_Enum.h" />
     <ClInclude Include="KOI_Include.h" />
@@ -161,6 +155,9 @@
     <ClInclude Include="KOI_Property.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="singleton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="KOI_Math.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

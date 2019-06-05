@@ -30,10 +30,10 @@ void CPlayer::Update()
 //	if (INPUT.KeyPress(VK_RIGHT)) m_vPosition.x += 400 * TIME.DeltaTime;
 }
 
-void CPlayer::Render()
-{
-	//m_pAnimation[m_Status]->Render(m_vPosition);
-}
+//void CPlayer::Render()
+//{
+//	//m_pAnimation[m_Status]->Render(m_vPosition);
+//}
 
 void CPlayer::Release()
 {

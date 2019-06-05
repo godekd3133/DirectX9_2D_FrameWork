@@ -13,18 +13,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Math\Rect">
-      <UniqueIdentifier>{b9f63236-7c45-43b3-a40b-3c8a3ddba8e6}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="KOI_Math.cpp">
-      <Filter>Math</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="KOI_Rect.cpp">
-      <Filter>Math\Rect</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -48,8 +36,10 @@
     <ClInclude Include="singleton.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="KOI_Rect.h">
-      <Filter>Math\Rect</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="KOI_Math.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

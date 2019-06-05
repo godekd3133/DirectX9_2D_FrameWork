@@ -19,11 +19,10 @@ public:
 public:
 	virtual void Init();
 	virtual void Update();
-	virtual void Render();
 	virtual void Release();
 
 private:
-	map<PLAYER_STATUS,CAnimation *> m_Animations; 
+//   	map<PLAYER_STATUS,CAnimation *> m_Animations; 
 	PLAYER_STATUS m_Status;
 };
 

@@ -13,7 +13,7 @@ CMainScene::~CMainScene()
 
 void CMainScene::Init()
 {
-	////OBJECT.AddObject(new CPlayer());
+	OBJECT.AddObject<CPlayer>()->Init();
 }
 
 void CMainScene::Update()
@@ -22,6 +22,7 @@ void CMainScene::Update()
 
 void CMainScene::Render()
 {
+
 }
 
 void CMainScene::Release()

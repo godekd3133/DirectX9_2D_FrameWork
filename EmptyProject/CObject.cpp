@@ -17,10 +17,10 @@ CObject::~CObject()
 }
 
 
-
-void CObject::Init()
+void CObject::Init(ObjectTag _Tag)
 {
-	this->AddComponent<CTransform>();
+	Translation = this->AddComponent<CTransform>();
+	m_Tag = _Tag;
 }
 
 void CObject::Update()

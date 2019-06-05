@@ -1,4 +1,5 @@
 #pragma once
+#include "../Engine/Engine/stdafx.h"
 #include <iostream>
 #include <vector>
 #include <map>
@@ -13,7 +14,6 @@
 #include <Psapi.h>
 #include <mmsystem.h>
 #include <Digitalv.h>
-
 //#include "DXUT/Optional/SDKsound.h"
 //#include "DXUT/Optional/SDKwavefile.h"
 //#pragma comment (lib, "dsound.lib")
@@ -24,7 +24,7 @@
 
 using namespace std;
 using namespace chrono;
-
+using namespace Math;
 using Second = chrono::duration<double>;
 // hypothetical C++2x code
 using Color = D3DCOLOR;
@@ -90,6 +90,5 @@ void Lerp(T* target, const T& start, const T& end, float speed)
 
 #include "CSceneManager.h"
 #include "CSoundManager.h"
-#include "CCollider.h"
-#include "../Engine/Engine/stdafx.h"
+
  

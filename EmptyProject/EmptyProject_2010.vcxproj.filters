@@ -122,7 +122,6 @@
     <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
       <Filter>ENGINE\DXUT</Filter>
     </ClCompile>
-    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmptyProject.cpp" />
@@ -174,9 +173,6 @@
     </ClCompile>
     <ClCompile Include="CComponent.cpp">
       <Filter>GAME\Object\Component</Filter>
-    </ClCompile>
-    <ClCompile Include="CCollider.cpp">
-      <Filter>GAME\Object\Component\Components</Filter>
     </ClCompile>
     <ClCompile Include="CRenderer.cpp">
       <Filter>GAME\Object\Component\Components</Filter>
@@ -244,9 +240,6 @@
     </ClInclude>
     <ClInclude Include="CComponent.h">
       <Filter>GAME\Object\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="CCollider.h">
-      <Filter>GAME\Object\Component\Components</Filter>
     </ClInclude>
     <ClInclude Include="CRenderer.h">
       <Filter>GAME\Object\Component\Components</Filter>

@@ -1,5 +1,5 @@
 #include "KOI_Math.h"
-
+using namespace Math;
 bool Math::CheckCollision(const Rect & _reRect, const Vector2 & _vPos)
 {
 	return (_reRect.Left < _vPos.x &&
@@ -37,3 +37,76 @@ bool Math::OBBCheckCollision(const Rect & _reRect01, float _fRot01, const Rect &
 	}
 	return true;
 }
+
+double Math::DegToRad(double deg)
+{
+	return deg / 180 * 3.141592;
+}
+
+double Math::RadToDeg(double rad)
+{
+	return rad * 180 / 3.141592;
+}
+
+Vector2 Math::GetDistanceVector(Rect a, Rect b)
+{
+	Vector2 ret;
+	ret.x = (a.Left + (a.Right - a.Left) / 2) - (b.Left + (b.Right - b.Left) / 2);
+	ret.y = (a.Top + (a.Bottom - a.Top) / 2) - (b.Top + (b.Bottom - b.Top) / 2);
+	return ret;
+}
+
+Vector2 Math::GetHeightVector(Rect a, float _fRot)
+{
+	Vector2 ret;
+	ret.x = (a.Bottom - a.Top) * cos(DegToRad(_fRot)) / 2;
+	ret.y = (a.Bottom - a.Top) * sin(DegToRad(_fRot)) / 2;
+	return ret;
+}
+
+Vector2 Math::GetWidthVector(Rect a, float _fRot)
+{
+	Vector2 ret;
+	ret.x = (a.Right - a.Left) * cos(DegToRad(_fRot)) / 2;
+	ret.y = (a.Right - a.Left) * sin(DegToRad(_fRot)) / 2;
+	return ret;
+}
+
+Vector2 Math::GetUnitVector(Vector2 a)
+{
+	Vector2 ret;
+	double size;
+	size = sqrtf(pow(a.x, 2) + pow(a.y, 2));
+	ret.x = a.x / size;
+	ret.y = a.y / size;
+	return ret;
+}
+
+Math::Rect::Rect()
+{
+}
+
+Math::Rect::Rect(FLOAT _fLeft, FLOAT _fTop, FLOAT _fRight, FLOAT _fBottom)
+	: Left(_fLeft), Top(_fTop), Right(_fRight), Bottom(_fBottom)
+{
+}
+
+Math::Rect::Rect(Vector2  _vPos, FLOAT _fWidth, FLOAT _fHeight)
+	: Left(_vPos.x), Top(_vPos.y), Right(_vPos.x + _fWidth), Bottom(_vPos.y + _fHeight)
+{
+
+}
+
+Math::Rect::Rect(RECT _reRect)
+	: Rect((FLOAT)_reRect.left,
+	(FLOAT)_reRect.top,
+		(FLOAT)_reRect.right,
+		(FLOAT)_reRect.bottom)
+{
+}
+
+Math::Rect::~Rect()
+{
+}
+
+
